@@ -19,7 +19,9 @@
     <header class="header">
         <a href="https://www.billetweb.fr/botta-architecture" class="header__button">RÉSERVER</a>
         <img class="header__logo" src="/public/img/Botta architecturewhite 1.webp" alt="Logo du site">
-        <button class="header__menu"><img src="/public/img/menu-open.svg" alt="Boutton du menu"></button>
+        <button class="header__menu" aria-controls="mainNav" @click="menuIsOpen = true">
+            <img src="/public/img/menu-open.svg" alt="Boutton du menu">
+        </button>
     </header>
     <!-- Fin de l'en-tête de page -->
 
