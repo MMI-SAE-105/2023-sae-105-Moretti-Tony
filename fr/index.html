@@ -23,7 +23,15 @@
             <img src="/public/img/menu-open.svg" alt="Boutton du menu">
         </button>
         <nav id="mainNav" x-show = "menuIsOpen" x-transition.duration.750ms class="menu">
-
+            <button class="menu__button" aria-controls="mainNav" @click="menuIsOpen = false">
+                <img src="/public/img/menu-closed.svg" alt="Croix pour fermer le menu">
+            </button>
+            <ul class="menu__pages">
+                <li class="menu__obj"><a href="/fr/index.html" class="menu__obj-lien">EXPOSITION</a></li>
+                <li class="menu__obj"><a href="/fr/studio.html" class="menu__obj-lien">STUDIO</a></li>
+                <li class="menu__obj"><a href="/fr/art.html" class="menu__obj-lien">ART</a></li>
+                <li class="menu__obj"><a href="/fr/contact.html" class="menu__obj-lien">CONTACT</a></li>
+            </ul>
         </nav>
     </header>
     <!-- Fin de l'en-tête de page -->
