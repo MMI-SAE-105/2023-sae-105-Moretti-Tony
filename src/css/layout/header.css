@@ -80,7 +80,7 @@
 
 }
 
-menu__pages--link {
+.menu__pages--link {
     margin-bottom: 30px;
     font-family: var(--menu-poppins-font-family);
     font-weight: var(--menu-poppins-font-weight);
@@ -96,6 +96,5 @@ menu__pages--link {
     text-decoration: none;
     font-size: var(--menu-poppins-font-size);
     font-weight: bold;
-    color: var(--smoke);
     margin-bottom: 44px;
 }
