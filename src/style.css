@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500&display=swap');
+@import "./css/layout/header.css";
+@import "./css/layout/footer.css";
+@import "./css/layout/main.css";
 
 @import "vendors/normalize.css";
-
 @import "utils/variables.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500&display=swap');
