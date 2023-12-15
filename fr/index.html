@@ -21,11 +21,11 @@
         <button class="header__button"><a href="https://www.billetweb.fr/botta-architecture" class="header__button-link">RÉSERVER</a></button>
         <img class="header__logo" src="/public/img/Botta architecturewhite 1.webp" alt="Logo du site">
         <button class="header__menu" aria-controls="mainNav" @click="menuIsOpen = true" x-bind:class="{ 'header__menu--hidden': menuIsOpen }">
-            <img src="/public/img/menu-open.svg" alt="Boutton du menu">
+            <img class="header__menu-btn" src="/public/img/menu-open.svg" alt="Boutton du menu">
         </button>
         <nav id="mainNav" x-show = "menuIsOpen" x-transition.duration.750ms class="menu">
             <button class="menu__button" aria-controls="mainNav" @click="menuIsOpen = false">
-                <img src="/public/img/menu-closed.svg" alt="Croix pour fermer le menu">
+                <img class="menu__button-btn" src="/public/img/menu-closed.svg" alt="Croix pour fermer le menu">
             </button>
             <ul class="menu__pages">
                 <li class="menu__obj"><a href="/fr/index.html" class="menu__obj-lien">EXPOSITION</a></li>

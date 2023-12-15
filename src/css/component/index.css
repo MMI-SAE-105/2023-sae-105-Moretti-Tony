@@ -1,0 +1,11 @@
+.main__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.main__top-title {
+    z-index: 20;
+}
