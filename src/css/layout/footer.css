@@ -23,3 +23,15 @@
    margin-bottom :10px; 
 }
 
+.footer__section-separation {
+    display:block; 
+    width :80%; 
+    border-bottom :1px solid white; 
+    margin-bottom :20px; 
+ }
+ 
+ .footer__menu,
+ .footer__socials{
+      text-align:center; 
+      margin-bottom :20px;  
+ }
