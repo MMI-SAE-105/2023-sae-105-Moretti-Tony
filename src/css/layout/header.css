@@ -1,3 +1,29 @@
 .header__menu--hidden {
     display: none;
 }
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--noir);
+    z-index: 100;
+}
+
+.menu__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    outline: none;
+    margin-top: 45px;
+    margin-right: 45px;
+    padding: 0;
+    width: 27px;
+    height: 27px;
+    border: none;
+    background: none;
+}
+
