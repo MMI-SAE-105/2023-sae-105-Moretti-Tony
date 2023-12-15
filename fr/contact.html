@@ -22,6 +22,7 @@
 <body>
     <!-- En-tête de la page -->
     <header class="header">
+        <button class="header__button"><a href="https://www.billetweb.fr/botta-architecture" class="header__button-link">RÉSERVER</a></button>
         <img class="header__logo" src="/public/img/Botta architecturewhite 1.webp" alt="Logo du site">
         <button class="header__menu" aria-controls="mainNav" @click="menuIsOpen = true" x-bind:class="{ 'header__menu--hidden': menuIsOpen }">
             <img src="/public/img/menu-open.svg" alt="Boutton du menu">
@@ -40,7 +41,27 @@
     </header>
     <!-- Fin de l'en-tête de page -->
 
-    <!-- Contenu principal de la page -->
-    <main class="main">
+    <!-- Pied de page -->
+    <footer class="footer">
+        <section class="footer__section">
+            <img class="footer__section-logo" src="/public/img/Botta architecturewhite 1.webp" alt="Logo du site">
+            <p class="footer__section-promo">Une exposition comme vous n'en verrez nul part ailleurs.</p>
+            <span class="footer__section-separation"></span>
+            <div class="footer__menu">
+                <p class="footer__menu-menu">MENU</p>
+                <a class="footer__menu-link" href="/fr/contact.html">CONTACT</a>
+            </div>
+            <div class="footer__socials">
+                <h6 class="footer__socials-follow">NOUS SUIVRE</h6>
+                <div class="footer__socials-link">
+                    <a href="#"><img src="/public/img/instagram.svg" alt=""></a>
+                    <a href="#"><img src="/public/img/facebook.svg" alt=""></a>
+                    <a href="#"><img src="/public/img/twitter.svg" alt=""></a>
+                </div>
+            </div>
+            <p class="footer__section-credits">© 2023 Botta architecture. All rights reserved. Développé par Tony Moretti MMI 1 B2</p>
+        </section>
+    </footer>
+    <!--Fin du pied de page -->
 
 </html>
