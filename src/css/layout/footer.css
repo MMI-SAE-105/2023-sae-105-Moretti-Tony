@@ -4,3 +4,10 @@
     font-family: Arial, sans-serif;
     padding: 20px;
 }
+
+.footer__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
