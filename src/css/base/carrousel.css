@@ -1,0 +1,43 @@
+.main__carrousel {
+    position: relative;
+}
+
+.carrousel_parent-ecrans {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.carrousel_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.7;
+    border-radius: 50%;
+    border: none;
+    display: grid;
+    place-content: center;
+    margin: 0 0.5rem;
+}
+
+.carrousel_btn-avant {
+    left: 0;
+}
+
+.carrousel_btn-apres {
+    right: 0;
+}
+
+.carrousel_ecran {
+    width: 100%;
+    flex: none;
+    scroll-snap-align: start;
+}
+
+.carrousel_ecran figure {
+    margin: 0;
+}
