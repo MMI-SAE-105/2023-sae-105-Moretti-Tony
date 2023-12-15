@@ -29,3 +29,12 @@
     background-color: white;
     margin: auto;
 }
+
+.main__top-scrolltxt {
+    position: relative;
+    color: var(--blanc);
+    font-size: 14px;
+    font-weight: lighter;
+    text-align: center;
+    top: -3rem;
+}
