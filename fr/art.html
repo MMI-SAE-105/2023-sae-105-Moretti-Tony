@@ -118,7 +118,7 @@
             </div>
         </section>
 
-        <main class="main" x-data="{ images: [
+        <main class="go" x-data="{ images: [
             { src: 'image1.jpg', caption: 'Image 1' },
             { src: 'image2.jpg', caption: 'Image 2' },
             { src: 'image3.jpg', caption: 'Image 3' },
@@ -126,12 +126,12 @@
             { src: 'image5.jpg', caption: 'Image 5' },
             { src: 'image6.jpg', caption: 'Image 6' }
         ]}">
-            <h1 class="main__title">Galerie d'oeuvres</h1>
-            <div class="main__gallery">
+            <h1 class="go__title">Galerie d'oeuvres</h1>
+            <div class="go__gallery">
                 <template x-for="image in images" :key="image.src">
-                    <div class="main__gallery-item">
+                    <div class="go__gallery-item">
                         <img :src="image.src" :alt="image.caption">
-                        <div class="main__gallery-item-caption" x-text="image.caption"></div>
+                        <div class="go__gallery-item-caption" x-text="image.caption"></div>
                     </div>
                 </template>
             </div>
