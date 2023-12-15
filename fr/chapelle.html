@@ -1,11 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="fr" x-data="{menuIsOpen : false}" :class="{noscroll:menuIsOpen,}">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Site de l'exposition sur Mario Botta">
+    <title>Botta architecture</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="alternate" hreflang="fr" href="https://sae105.netlify.app/fr/">
+    <link rel="alternate" hreflang="en" href="https://sae105.netlify.app/en/">
+    <style>
+        .header__menu--hidden {
+    display: none;
+}
+    </style>
 </head>
+
 <body>
-    
+    <!-- En-tête de la page -->
+    <header class="header">
+        <button class="header__button"><a href="https://www.billetweb.fr/botta-architecture" class="header__button-link">RÉSERVER</a></button>
+        <img class="header__logo" src="/public/img/Botta architecturewhite 1.webp" alt="Logo du site">
+        <button class="header__menu" aria-controls="mainNav" @click="menuIsOpen = true" x-bind:class="{ 'header__menu--hidden': menuIsOpen }">
+            <img src="/public/img/menu-open.svg" alt="Boutton du menu">
+        </button>
+        <nav id="mainNav" x-show = "menuIsOpen" x-transition.duration.750ms class="menu">
+            <button class="menu__button" aria-controls="mainNav" @click="menuIsOpen = false">
+                <img src="/public/img/menu-closed.svg" alt="Croix pour fermer le menu">
+            </button>
+            <ul class="menu__pages">
+                <li class="menu__obj"><a href="/fr/index.html" class="menu__obj-lien">EXPOSITION</a></li>
+                <li class="menu__obj"><a href="/fr/studio.html" class="menu__obj-lien">STUDIO</a></li>
+                <li class="menu__obj"><a href="/fr/art.html" class="menu__obj-lien">ART</a></li>
+                <li class="menu__obj"><a href="/fr/contact.html" class="menu__obj-lien">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Fin de l'en-tête de page -->
+
+    <!-- Contenu principal de la page -->
+    <main class="main">
+
+        <section class="main__top">
+            <img src="/public/img/3 Berg Oase foto Urs Homberger 1.webp" alt="Photographie de Mario Botta" class="main__top-image">
+            <h1 class="main__top-title">DES OEUVRES UNIQUES</h1>
+            <span class="main__top-trait1"></span>
+            <p class="main__top-scrolltxt">SCROLL</p>
+            <span class="main__top-trait2"></span>
+        </section>
+
+        <section class="main__artc">
+            <h4 class="main__artc-title"><strong>Chapelle Garnet, Penkenjoch, Zillertal, Autriche, 2011-2013</strong></h4>
+            <ul class="main__artc-list">
+                <li class="main__artc-elt">Projet : 2011</li>
+                <li class="main__artc-elt">Construction : 2012-2013</li>
+                <li class="main__artc-elt">Client : Josef Brindlinger, Christa et Georg Kroell-Brindlinger</li>
+                <li class="main__artc-elt">Partenaire : Architecte Bernhard Stoehr, Besto zt gmbh</li>
+                <li class="main__artc-elt">Superficie du site : 600 m²</li>
+                <li class="main__artc-elt">Surface utile : 40 m²</li>
+                <li class="main__artc-elt">Volume : 750 m²</li>
+            </ul>
+            <img class="main__artc-img" src="/public/img/2 schizzi preliminari Ponte 1.webp" alt="Croquis d'un design de table par Mario">
+            <p class="main__art-text">En 2011, le cabinet MARIO BOTTA ARCHITETTI déménage à Mendrisio, où il continue à être impliqué dans des projets nationaux et internationaux ainsi que dans d'importantes compétitions.</p>
+            <span class="artc__span"></span>
+        </section>
+
+    </main>
+        <!-- Fin du contenu principal de la page -->
+
+        <!-- Pied de page -->
+    <footer class="footer">
+        <section class="footer__section">
+            <img class="footer__section-logo" src="/public/img/Botta architecturewhite 1.webp" alt="Logo du site">
+            <p class="footer__section-promo">Une exposition comme vous n'en verrez nul part ailleurs.</p>
+            <span class="footer__section-separation"></span>
+            <div class="footer__menu">
+                <p class="footer__menu-menu">MENU</p>
+                <a class="footer__menu-link" href="/fr/contact.html">CONTACT</a>
+            </div>
+            <div class="footer__socials">
+                <h6 class="footer__socials-follow">NOUS SUIVRE</h6>
+                <div class="footer__socials-link">
+                    <a href="#"><img src="/public/img/instagram.svg" alt=""></a>
+                    <a href="#"><img src="/public/img/facebook.svg" alt=""></a>
+                    <a href="#"><img src="/public/img/twitter.svg" alt=""></a>
+                </div>
+            </div>
+            <p class="footer__section-credits">© 2023 Botta architecture. All rights reserved. Développé par Tony Moretti MMI 1 B2</p>
+        </section>
+    </footer>
+    <!--Fin du pied de page -->
 </body>
 </html>
