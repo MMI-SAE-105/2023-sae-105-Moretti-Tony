@@ -1,4 +1,4 @@
-.main {
+.go {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,35 +6,35 @@
     min-height: 80vh;
 }
 
-.main__title {
+.go__title {
     font-size: 3rem;
     color: black;
     margin-bottom: 20px;
 }
 
-.main__gallery {
+.go__gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
 }
 
-.main__gallery-item {
+.go__gallery-item {
     position: relative;
     overflow: hidden;
 }
 
-.main__gallery-item img {
+.go__gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.main__gallery-item:hover img {
+.go__gallery-item:hover img {
     transform: scale(1.1);
 }
 
-.main__gallery-item-caption {
+.go__gallery-item-caption {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -47,6 +47,6 @@
     transition: opacity 0.3s ease;
 }
 
-.main__gallery-item:hover .main__gallery-item-caption {
+.go__gallery-item:hover .go__gallery-item-caption {
     opacity: 1;
 }
