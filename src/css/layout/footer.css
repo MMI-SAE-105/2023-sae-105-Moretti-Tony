@@ -15,3 +15,11 @@
     width: 50%;
 }
 
+.footer__section-promo,
+.footer__menu-menu,
+.footer__socials-follow,
+.footer__section-credits {
+   text-align:center; 
+   margin-bottom :10px; 
+}
+
