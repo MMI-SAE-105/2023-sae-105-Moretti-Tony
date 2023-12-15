@@ -1,0 +1,32 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+.main__title {
+    font-size: 5rem;
+    color: var(--blanc);
+}
+
+.main__subtitle {
+    font-size: 2rem;
+    color: var(--blanc);
+}
+
+.main__button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid var(--blanc);
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.main__button:hover {
+    background-color: var(--blanc);
+    color: var(--noir);
+}
