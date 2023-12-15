@@ -1,25 +1,41 @@
+</html>
+
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="fr" x-data="{menuIsOpen : false}" :class="{noscroll:menuIsOpen,}">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Exposition website about Mario Botta">
+    <meta name="description" content="Site de l'exposition sur Mario Botta">
     <title>Botta architecture</title>
-    <link rel="stylesheet" href="./src/style.css">
-    <script defer src="https://unpkg.com/alpine.js"></script>
+    <link rel="stylesheet" href="/src/style.css">
+    <script defer src="https://unpkg.com/alpinejs"></script>
     <link rel="alternate" hreflang="fr" href="https://sae105.netlify.app/fr/">
     <link rel="alternate" hreflang="en" href="https://sae105.netlify.app/en/">
 </head>
 
 <body>
+
     <!-- En-tête de la page -->
     <header class="header">
-        <a href="https://www.billetweb.fr/botta-architecture" class="header__button">BOOKING</a>
-        <img class="header__logo" src="./public/img/Botta architecturewhite 1.webp" alt="Website logo">
-        <button class="header__menu"><img src="/public/img/menu-open.svg" alt="Menu button"></button>
+        <button class="header__button"><a href="https://www.billetweb.fr/botta-architecture" class="header__button-link">BOOKING</a></button>
+        <img class="header__logo" src="/public/img/Botta architecturewhite 1.webp" alt="Logo du site">
+        <button class="header__menu" aria-controls="mainNav" @click="menuIsOpen = true" x-bind:class="{ 'header__menu--hidden': menuIsOpen }">
+            <img class="header__menu-btn" src="/public/img/menu-open.svg" alt="Boutton du menu">
+        </button>
+        <nav id="mainNav" x-show = "menuIsOpen" x-transition.duration.750ms class="menu">
+            <button class="menu__button" aria-controls="mainNav" @click="menuIsOpen = false">
+                <img class="menu__button-btn" src="/public/img/menu-closed.svg" alt="Croix pour fermer le menu">
+            </button>
+            <ul class="menu__pages">
+                <li class="menu__obj"><a href="/fr/index.html" class="menu__obj-lien">EXHIBITION</a></li>
+                <li class="menu__obj"><a href="/fr/studio.html" class="menu__obj-lien">STUDIO</a></li>
+                <li class="menu__obj"><a href="/fr/art.html" class="menu__obj-lien">ART</a></li>
+                <li class="menu__obj"><a href="/fr/contact.html" class="menu__obj-lien">CONTACT</a></li>
+            </ul>
+        </nav>
     </header>
     <!-- Fin de l'en-tête de page -->
 
@@ -27,10 +43,10 @@
     <main class="main">
 
         <section class="main__top">
-            <img src="/public/img/2_Evry_Cathedral 1.webp" alt="" class="main__top-image">
+            <img src="/public/img/2_Evry_Cathedral 1.webp" alt="Photographie de la cathédrale d'Evry" class="main__top-image">
             <h1 class="main__top-title">A SPECTACULAR EXHIBITION</h1>
             <span class="main__top-trait1"></span>
-            <p class="main__top-scrolltxt"></p>
+            <p class="main__top-scrolltxt">SCROLL</p>
             <span class="main__top-trait2"></span>
         </section>
 
@@ -39,31 +55,31 @@
             <div class="main__info-dates">
                 <span class="main__info-span"></span>
                 <p class="main__info-titres">DATES</p>
-                <img src="/public/img/calendrier.svg" alt="Picture of a calendar">
+                <img class="main__info-img" src="/public/img/calendrier.svg" alt="Image d'un calendrier">
                 <p class="main__info-text">April 13 to June 24, 2024</p>
             </div>
             <div class="main__info-horaires">
                 <span class="main__info-span"></span>
-                <p class="main__info-titres">TIMES</p>
-                <img src="/public/img/horloge.svg" alt="Picture of a clock">
+                <p class="main__info-titres">HORAIRES</p>
+                <img class="main__info-img" src="/public/img/horloge.svg" alt="Image d'une horloge">
                 <p class="main__info-text">Daily 11am-8pm, except Mondays. Nocturne on Tuesdays, until 10pm. Halls close at 7:45pm (9:45pm on Tuesdays).</p>
             </div>
             <div class="main__info-lieu">
                 <span class="main__info-span"></span>
-                <p class="main__info-titres">SITE</p>
-                <img src="/public/img/carte.svg" alt="Picture of a map">
+                <p class="main__info-titres">LIEU</p>
+                <img class="main__info-img" src="/public/img/carte.svg" alt="Image d'une carte">
                 <p class="main__info-text">Cartier Foundation, 261 Bd Raspail, 75014 Paris</p>
             </div>
             <div class="main__info-tarifs">
                 <span class="main__info-span"></span>
-                <p class="main__info-titres">PRICES</p>
-                <img src="/public/img/Price Tag.svg" alt="d'Picture of a price tag">
+                <p class="main__info-titres">TARIFS</p>
+                <img class="main__info-img" src="/public/img/Price Tag.svg" alt="Image d'une étiquette de prix">
                 <ul class="main__info-liste">
-                    <li> Full price : <strong>11€</strong></li>
+                    <li>Full price : <strong>11€</strong></li>
                     <li>Reduced price : <strong>7,50€</strong></li>
-                    <li>Discount 13 - 25 ans : <strong>5€</strong></li>
+                    <li>Discount 13 - 25 years old : <strong>5€</strong></li>
                     <li>Cartier Foundation Pass : <strong>18€ - 50€</strong></li>
-                    <li><strong>FREE</strong> Under 13s, Annual Pass, Icom Card, Press Card, Disability Card, Fondation Cartier Pass, Students</li>
+                    <li><strong>GRATUIT</strong> Under 13s, Annual Pass, Icom Card, Press Card, Disability Card, Fondation Cartier Pass, Students</li>
                 </ul>
             </div>
             <span class="main__info-span"></span>
@@ -71,13 +87,13 @@
 
         <section class="main__cards">
             <div class="main__cards-studio">
-                <p class="main__cards-text">Mario Botta is a great Italian architect known for many of his works. This exhibition aims to shed light on him. But who really is Mario Botta?</p>
-                <img class="main__cards-photo" src="/public/img/Botta_Casali-Domus.jpg.foto.rmedium 1.webp" alt="Black and white photograph of Mario Botta">
+                <p class="main__cards-text">Mario Botta is a great Italian architect known for many of his works. This exhibition aims to shed light on him. But who really is Mario Botta ?</p>
+                <img class="main__cards-photo" src="/public/img/Botta_Casali-Domus.jpg.foto.rmedium 1.webp" alt="Photographie noir et blanc de Mario Botta">
                 <a href="/fr/studio.html"><button class="main__cards-button">LEARN MORE</button></a>
             </div>
             <div class="main__cards-art">
                 <p class="main__cards-text">Mario Botta is the author of major architectural works known the world over. He also designs everyday objects.</p>
-                <img class="main__cards-photo" src="/public/img/8 Bibliotecda Tsinghua foto Fu Xing 1.webp" alt="Black and white photograph of the Tsinghua Library">
+                <img class="main__cards-photo" src="/public/img/8 Bibliotecda Tsinghua foto Fu Xing 1.webp" alt="Photographie noir et blanc de la bibliothèque Tsinghua">
                 <a href="/fr/art.html"><button class="main__cards-button">LEARN MORE</button></a>
             </div>
         </section>
@@ -87,7 +103,7 @@
     <!-- Pied de page -->
     <footer class="footer">
         <section class="footer__section">
-            <img class="footer__section-logo" src="/public/img/Botta architecturewhite 1.webp" alt="Website logo">
+            <img class="footer__section-logo" src="/public/img/Botta architecturewhite 1.webp" alt="Logo du site">
             <p class="footer__section-promo">An exhibition like no other.</p>
             <span class="footer__section-separation"></span>
             <div class="footer__menu">
@@ -97,15 +113,16 @@
             <div class="footer__socials">
                 <h6 class="footer__socials-follow">FOLLOW US</h6>
                 <div class="footer__socials-link">
-                    <a href="#"><img src="/public/img/instagram.svg" alt="Instagram logo"></a>
-                    <a href="#"><img src="/public/img/facebook.svg" alt="Facebook logo"></a>
-                    <a href="#"><img src="/public/img/twitter.svg" alt="Twitter logo"></a>
+                    <a href="#"><img src="/public/img/instagram.svg" alt=""></a>
+                    <a href="#"><img src="/public/img/facebook.svg" alt=""></a>
+                    <a href="#"><img src="/public/img/twitter.svg" alt=""></a>
                 </div>
             </div>
             <p class="footer__section-credits">© 2023 Botta architecture. All rights reserved. Made with heart by Tony Moretti MMI 1 B2</p>
         </section>
     </footer>
     <!--Fin du pied de page -->
+
 </body>
 
 </html>
