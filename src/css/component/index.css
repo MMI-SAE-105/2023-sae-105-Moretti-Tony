@@ -1,0 +1,51 @@
+.main__info-h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.main__info-titres {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 20px;
+}
+
+.main__info-text {
+    font-size: 0.9rem;
+    font-weight: 100;
+    text-align: center;
+    padding: 20px;
+}
+
+.main__info-liste {
+    font-size: 0.9rem;
+    font-weight: 100;
+    text-align: left;
+    padding: 20px;
+}
+
+.main-cards-studio {
+    display: flex;
+}
+
+.main__cards-text {
+    padding: 15px;
+}
+
+.main__cards-button {
+    position: relative;
+    justify-content: center;
+    width: 40%;
+    height: 45px;
+    background: transparent;
+    border-radius: 40px;
+    cursor: pointer;
+    color: var(--blanc);
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid var(--blanc);
+    overflow: hidden;
+}
